@@ -1,0 +1,443 @@
+
+:root{
+    --color-dark: #000;
+    --color-dark-light: rgb(18, 18, 18);
+    --color-crimson: #dc143c;
+    --color-white: #f6efef;
+    --color-muted: #808080;
+    --color-muted-light: #d3cdcd;
+
+    --padding: 0.8rem 2rem;
+
+    --transition: all 0.3s linear;   
+}
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    border: none;
+    list-style-type: none;
+    text-decoration: none;
+}
+body{
+    font-family: sans-serif;
+    overflow-x: hidden;
+    background-color: #F5F5F5;
+    width: 100vw;
+}
+
+.crimson{
+    color: var(--color-crimson);
+}
+.light{
+    color: var(--color-white);
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+.img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* ==========================navbar=================== */
+
+.navbar{
+    background-color: var(--color-dark);
+    width: 100vw;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.navbar .container nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+.navbar .container nav .logo h2{
+    color: var(--color-white);
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.navbar .container nav .logo small{
+    color: var(--color-muted-light);
+    margin-top: 0.5rem;
+    letter-spacing: 1.1px;
+    font-size: 0.8rem;
+}
+.navbar .container nav .menu-item a{
+    margin-left: 1.8rem;
+    color: var(--color-white);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: var(--transition);
+    font-family: inherit;
+}
+.navbar .container nav .menu-item a:hover{
+    color: var(--color-crimson);
+}
+.navbar .container nav .menu-item a:first-child{
+    color: var(--color-crimson);
+}
+
+/* ==================navbar bottom================= */
+.botm{
+    background-color: var(--color-crimson);
+    margin-top: 5rem;
+    text-align: center;
+}
+.botm a .light{
+    font-weight: 400;
+}
+.botm a{
+    color:var(--color-dark);
+    font-size: 0.7rem;
+    display: inline-block;
+    padding: 0.3rem 0;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+/* ====================header=============================== */
+main{
+    background-color: #F4B8C0;
+    background-image: url(./image/radu-florin-5QUdx2QujlU-unsplash-removebg-preview.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: calc(75px*6);
+    height: 75vh;
+
+}
+main .container .new-item{
+    display: grid;
+    grid-template-columns: 30rem auto;
+}
+main .container .new-item .left{
+    margin-top: 4rem;
+}
+main .container .new-item .left h4{
+    color: var(--color-crimson);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+main .container .new-item .left span{
+    width: 78%;
+    height: 2px;
+    background-color: var(--color-crimson);
+    display: block;
+}
+main .container .new-item .left h1{
+    font-size: 3.5rem;
+    color: var(--color-white);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 5px 0;
+}
+main .container .new-item .left h2{
+    font-size: 1.3rem;
+    color: var(--color-white);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+main .container .new-item .left p{
+    font-size: 0.8rem;
+    text-align: justify;
+    color: var(--color-white);
+    width: 60%;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+}
+.btn-primary{
+    border: 2px solid var(--color-crimson);
+    padding: 0.6rem 2rem;
+    font-size: 0.8rem;
+    color: var(--color-crimson);
+    font-weight: 700;
+    transition: var(--transition);
+}
+.btn-primary:hover{
+    background-color: var(--color-crimson);
+    color: var(--color-white);
+    border: 2px solid var(--color-crimson);
+}
+/* =====================user=================================== */
+
+.container .user{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3.5rem 0;
+    background-color: var(--color-crimson);
+    margin: 10rem 0;
+    border-radius: 1rem;
+    font-family: inherit;
+}
+.container .user .subscribers > h2{
+    font-size: 2.5rem;
+    color: var(--color-white);
+    font-weight: 600;
+}
+.container .user .subscribers > p{
+    font-size: 1.5rem;
+    color: var(--color-white);
+    font-weight: 400;
+}
+/* ================collection================= */
+.collection-part{
+    margin-bottom: 10rem;
+}
+.collectionh2{
+    font-size: 2.5rem;
+    color: var(--color-dark);
+    margin-bottom: 1rem;
+}
+.collection-part .container .collections{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+.collection-part .container .collections .collection > a{
+    display: flex;
+    font-size: 0.8rem;
+    color: var(--color-muted);
+    display: block;
+    margin: 5px 0;
+    font-weight: 700;
+}
+.collection-part .container .collections .collection > a:first-child{
+    color: var(--color-crimson);
+}
+/* ==============================About========================= */
+ .about-grow-img{
+    position: sticky;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 47% 53%;
+}
+.about-grow-img .about-right{
+    width: 100%;
+    height: 600px;
+     margin-bottom: -500px;
+ }
+.about-grow-img .about-right img{
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem 0 0 1rem;
+ }
+ 
+.about{
+    display: grid;
+    grid-template-columns: 55% auto 1%;
+    gap: 10%;
+    margin-bottom: 10rem;
+}
+.about .left .cover-img{
+    width: 100%;
+    height: 800px;
+}
+.about .left .cover-img img{
+    width: 95%;
+    height: 100%;
+    border-radius: 0 1rem 1rem 0;
+    /* margin-top: -520px; */
+}
+.about .middle{
+    margin-top: 35rem;
+}
+.about .middle h2{
+    font-size: 2.5rem;
+    color: var(--color-dark);
+    margin-bottom: 1rem;
+}
+.about .middle p{
+    font-size: 0.8rem;
+    color: var(--color-muted);
+    margin-bottom: 2.5rem;
+    text-align: justify;
+    line-height: 1.2;
+    letter-spacing: 1px;
+}
+.btn{
+    border: 2px solid var(--color-dark);
+    padding: 0.6rem 2rem;
+    font-size: 0.8rem;
+    color: var(--color-dark);
+    font-weight: 700;
+    transition: var(--transition);
+}
+.btn:hover{
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    border: 2px solid var(--color-dark);
+}
+
+/* ====================Browse Items===================== */
+.container .browse-items{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+   /* justify-content: space-between; */
+   /* align-items: center; */
+   gap: 5rem;
+   margin-bottom: 10rem;
+}
+.container .browse-items .browse-item{
+    /* width: 220px; */
+    background-color: #FFF;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    box-shadow:0 0 1px var(--color-muted-light);
+    text-align: center;
+    padding-bottom: 2rem;
+}
+.container .browse-items .browse-item img{
+    width: 100%;
+    height: 200px;
+    border-radius: 0.5rem;
+}
+.container .browse-items .browse-item h4{
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin: 0.8rem;
+}
+.container .browse-items .browse-item p{
+    color: var(--color-muted-light);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: justify;
+    margin-bottom: 2rem;
+}
+/* ===================contact================== */
+
+.contact-grow-img{
+    position: sticky;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 53% 47%;
+}
+.contact-grow-img .contact-right{
+    width: 100%;
+    height: 600px;
+     margin-bottom: -500px;
+ }
+.contact-grow-img .contact-right img{
+        width: 100%;
+        height: 100%;
+        border-radius: 0rem 1rem 1rem 0rem;
+ }
+ 
+.contact{
+    display: grid;
+    grid-template-columns: 1% auto 55%;
+    gap: 10%;
+    margin-bottom: 10rem;
+}
+.contact .right .cover-img{
+    width: 100%;
+    height: 800px;
+}
+.contact .right .cover-img img{
+    width: 95%;
+    height: 100%;
+    border-radius: 1rem 0rem 0rem 1rem;
+    /* margin-top: -520px; */
+}
+.contact .middle{
+    margin-top: 35rem;
+}
+.contact .middle h2{
+    font-size: 2.5rem;
+    color: var(--color-dark);
+    margin-bottom: 1rem;
+}
+.contact .middle p{
+    font-size: 0.8rem;
+    color: var(--color-muted);
+    margin-bottom: 2.5rem;
+    text-align: justify;
+    line-height: 1.2;
+    letter-spacing: 1px;
+}
+.btn{
+    border: 2px solid var(--color-dark);
+    padding: 0.6rem 2rem;
+    font-size: 0.8rem;
+    color: var(--color-dark);
+    font-weight: 700;
+    transition: var(--transition);
+}
+.btn:hover{
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    border: 2px solid var(--color-dark);
+}
+/* =================sign up=============== */
+.container .sign-up{
+    background-color: var(--color-crimson);
+    text-align: center;
+    padding: 5rem 0;
+    border-radius: 0.8rem;
+    margin-bottom: 10rem;
+}
+.container .sign-up h3{
+    text-transform: capitalize;
+    font-size: 1.8rem;
+    color: var(--color-white);
+    margin-bottom: 0.8rem;
+}
+.container .sign-up .sign-up-feild input{
+    padding: 0.3rem 1rem;
+    width: 25rem;
+    border-radius: 0.1rem;
+    margin-right: 1rem;
+}
+.container .sign-up .sign-up-feild  a{
+    color: var(--color-white);
+    background-color: var(--color-dark);
+    padding: 0.3rem 1.4rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: var(--transition);
+}
+.container .sign-up .sign-up-feild  a:hover{
+    background-color: var(--color-dark-light);
+}
+/* =================footer============ */
+footer{
+    text-align: center;
+    background-color: var(--color-dark);
+    padding: 8rem 0;
+} 
+footer .fotter-part-head h2{
+    color: var(--color-white);
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+}
+footer .fotter-part-head p{
+    color: var(--color-white);
+    font-size: 0.8rem;
+}
+footer .fotter-part-end a i{
+    color: var(--color-dark);
+    background-color: var(--color-white);
+    margin-top: 1rem;
+    display: inline-block;
+    border-radius: 0.2rem;
+    font-size: 1.2rem;
+}
+footer .fotter-part-end a:first-child{
+    margin-right: 0.5rem;
+}
